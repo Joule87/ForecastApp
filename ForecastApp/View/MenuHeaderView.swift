@@ -14,29 +14,27 @@ struct MenuHeaderView: View {
     @State private var searchTerm = "Montevideo"
     
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(Color.black)
             TextField("", text: $searchTerm)
-                .padding(.leading, 20)
                 .font(.system(.title2))
                 .foregroundColor(.black)
             Button(action: {
                 cityViewModel.city = searchTerm
             }, label: {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: 30)
                         .fill(Color(#colorLiteral(red: 0.3132888687, green: 0.2179881276, blue: 0.7381488293, alpha: 1)))
                     Image(systemName: "location.fill")
                 }
             }).frame(width: 50, height: 50)
         }
         .foregroundColor(Color.white)
-        .padding()
+        .padding(.all, 10)
         .background(ZStack (alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.white.opacity(0.5))
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(Color.black)
-                .padding(.leading, 10)
+                .fill(Color.white.opacity(0.8))
         })
         .padding(.horizontal, 10)
     }

@@ -20,7 +20,9 @@ struct HourlyWeatherView: View {
                     getHourlyView(hour: hour, image: icon, temp: temperature)
                 }
             }
-        }.padding(.leading, 10)
+        }
+        .padding(.leading, 10)
+        .padding(.vertical, 10)
     }
     
     private func getHourlyView(hour: String, image: Image, temp: String) -> some View {
