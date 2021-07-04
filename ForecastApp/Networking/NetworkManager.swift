@@ -37,7 +37,20 @@ final class NetworkManager<T: Codable> {
                 let jsonObject = try JSONDecoder().decode(T.self, from: data)
                 completionHandler(.success(jsonObject))
             } catch let decodeError {
-                print("Decoding Error: \(decodeError.localizedDescription)")
+                if let error = decodeError as? DecodingError {
+                    switch error {
+                    case .typeMismatch(let key, let value):
+                        print("Mismatch Error: \(key), value: \(value), Description: \(error.localizedDescription)")
+                    case .valueNotFound(let key, let value):
+                        print("Value not Error: \(key), value: \(value), Description: \(error.localizedDescription)")
+                    case .keyNotFound(let key, let value):
+                        print("Key not found error: \(key), value: \(value), Description: \(error.localizedDescription)")
+                    case .dataCorrupted(let key):
+                        print("Data Corrupted error: \(key), Description: \(error.localizedDescription)")
+                    default:
+                        print("ERROR: \(error.localizedDescription)")
+                    }
+                }
                 completionHandler(.failure(.decodingError(errorDescription: decodeError.localizedDescription)))
             }
         }.resume()

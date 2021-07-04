@@ -19,7 +19,7 @@ struct Weather: Codable, Identifiable {
     var windDeg: Int
     var weather: [WeatherDetail]
     
-    enum CodingKey: String {
+    enum CodingKeys: String, CodingKey {
         case date = "dt"
         case temp
         case feelsLike = "feels_like"
