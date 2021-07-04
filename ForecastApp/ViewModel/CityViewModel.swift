@@ -16,30 +16,12 @@ final class CityViewModel: ObservableObject {
         }
     }
     
-    private lazy var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        return formatter
-    }()
-    
-    private lazy var dayFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEE"
-        return formatter
-    }()
-    
-    private lazy var timeFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh a"
-        return formatter
-    }()
-    
     init() {
         getLocation()
     }
     
     var date: String {
-        return dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.date)))
+        return FormatterUtil.dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.date)))
     }
     
     var weatherIcon: String {
@@ -73,7 +55,7 @@ final class CityViewModel: ObservableObject {
     }
     
     func getTimeFor(timestamp: Int) -> String {
-        return timeFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
+        return FormatterUtil.timeFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
     }
     
     func getTemperatureFor(temp: Double) -> String {
@@ -81,7 +63,7 @@ final class CityViewModel: ObservableObject {
     }
     
     func getDayFor(timestamp: Int) -> String {
-        return dayFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
+        return FormatterUtil.dayFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
     }
     
     private func getWeather(coordinates: CLLocationCoordinate2D?) {

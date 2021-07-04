@@ -15,6 +15,7 @@ struct TodayWeatherView: View {
             Text("Today")
                 .font(.largeTitle)
                 .bold()
+                .padding(.top, 20)
             
             HStack(spacing: 20) {
                 LottieView(name: LottieAnimationUtil.getLottieAnimationFor(icon: cityViewModel.weatherIcon))
@@ -37,12 +38,9 @@ struct TodayWeatherView: View {
                 Spacer()
             }.padding()
         }
-        .padding()
         .foregroundColor(.white)
-        .background(RoundedRectangle(cornerRadius: 20)
-                        .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)).opacity(0.5))
-        .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
-        .shadow(color: Color.blue.opacity(0.2), radius: 2, x: 2, y: 2)
+        .clearDaySkyBackgroundStyle()
+        .padding(.horizontal, 10)
     }
     
     private func widgetView(image: String, color: Color, title: String) -> some View {

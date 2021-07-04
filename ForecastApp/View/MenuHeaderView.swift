@@ -17,24 +17,28 @@ struct MenuHeaderView: View {
         HStack {
             TextField("", text: $searchTerm)
                 .padding(.leading, 20)
+                .font(.system(.title2))
+                .foregroundColor(.black)
             Button(action: {
                 cityViewModel.city = searchTerm
             }, label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.blue)
+                        .fill(Color(#colorLiteral(red: 0.3132888687, green: 0.2179881276, blue: 0.7381488293, alpha: 1)))
                     Image(systemName: "location.fill")
                 }
             }).frame(width: 50, height: 50)
-        }.foregroundColor(Color.white)
+        }
+        .foregroundColor(Color.white)
         .padding()
         .background(ZStack (alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color.blue.opacity(0.5))
+                .fill(Color.white.opacity(0.5))
             Image(systemName: "magnifyingglass")
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.black)
                 .padding(.leading, 10)
         })
+        .padding(.horizontal, 10)
     }
 }
 

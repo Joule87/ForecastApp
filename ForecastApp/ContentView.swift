@@ -19,7 +19,7 @@ struct ContentView: View {
                 }
             }
             .padding(.top, 40)
-        }.background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6050806046, green: 0.8078469634, blue: 0.9820559621, alpha: 1)), Color(#colorLiteral(red: 0.4927015901, green: 0.6170919538, blue: 0.9509068131, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)))
+        }.background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.1538108573, green: 0.07712940528, blue: 0.2855395904, alpha: 1)), Color(#colorLiteral(red: 0.5, green: 0.3684665896, blue: 0.4267031192, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)))
         .edgesIgnoringSafeArea(.all)
     }
 }

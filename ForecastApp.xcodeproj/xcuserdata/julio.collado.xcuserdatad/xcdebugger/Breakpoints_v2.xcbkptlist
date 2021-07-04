@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D6DFD095-F695-4074-8607-E6172875ACB4"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A86397F-34B0-4B51-8F3D-20F966C80FCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ForecastApp/Networking/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetch(for:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A86397F-34B0-4B51-8F3D-20F966C80FCD - bffacd8a77cd3f78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ForecastApp.NetworkManager.fetch(for: Foundation.URL, completionHandler: (Swift.Result&lt;A, ForecastApp.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julio.collado/Documents/Test/ForecastApp/ForecastApp/Networking/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "9A86397F-34B0-4B51-8F3D-20F966C80FCD - cee48e159c88b833"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static ForecastApp.NetworkManager.fetch(for: Foundation.URL, completionHandler: (Swift.Result&lt;A, ForecastApp.NetworkError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/julio.collado/Documents/Test/ForecastApp/ForecastApp/Networking/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "365">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
