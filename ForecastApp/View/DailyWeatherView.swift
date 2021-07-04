@@ -26,7 +26,7 @@ struct DailyWeatherView: View {
                 .padding(.leading, 20)
             Spacer()
             Text("max: \(cityViewModel.getTemperatureFor(temp: weather.temperature.max)) | min: \(cityViewModel.getTemperatureFor(temp: weather.temperature.min)) ℃")
-                .font(.title3)
+                .font(.body)
             Spacer()
             LottieAnimationUtil.getWeatherIconFor(icon: weather.weather.first?.icon ?? "")
                 .renderingMode(.original)
